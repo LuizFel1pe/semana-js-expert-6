@@ -1,0 +1,40 @@
+sox \
+  --i \
+  "audio/songs/conversation.mp3"
+
+sox \
+  --i \
+  "audio/fx/Boo! Sound Effect (128 kbps).mp3"
+
+// Padronização do audio.
+sox \
+  -v 0.99 \
+  -t mp3 \
+  "audio/fx/Applause Sound Effect HD No Copyright (128 kbps).mp3" \
+  -r 48000 \
+  -t mp3 \
+  "output.mp3"
+
+// Get Bitrate
+sox \ 
+  --i \
+  -B \
+  "audio/fx/Boo! Sound Effect (128 kbps).mp3"
+
+// Concatenar dois audios
+sox \
+  -t mp3 \
+  -v 0.99 \
+  -m "audio/songs/conversation.mp3" \
+  -t mp3 \
+  -v 0.99 \
+  "audio/fx/Laughing Sound #3 - Audience laughing Sound Effects(HD) No Copyright Sound Effects (128 kbps).mp3" \
+  -t mp3 \
+  "output.mp3"
+
+      // bypass prevent cache
+      
+      // Doesn't work
+      // window.onload = () => {
+      //   document.getElementById('audio').src = '/stream?id=' + Date.now();
+      // };

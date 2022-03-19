@@ -1,0 +1,8 @@
+server:
+  service: 'processing layer'
+  controller: 'middleware between presentation layer and processing layer'
+  routes: 'presentation layer'
+  server: 'create server'
+  index: 'instance of server and expose for web'
+  config: 'statics'
+  util: 'logger'
